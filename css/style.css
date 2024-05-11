@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo{
+    width: 54.5ch;
+    animation: typing 5s steps(50), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+.textAnimation{
+    animation: textAnim 5s steps(20) forwards, blink .5s step-end infinite alternate forwards;
+}
+
+@keyframes textAnim{
+    0%{
+        width: 54.5ch;
+    }
+    50%{
+        width: 30ch;
+    }
+    100%{
+        width: 0ch;
+    }
+}
